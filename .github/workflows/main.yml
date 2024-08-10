@@ -27,9 +27,9 @@ jobs:
       run: |
         mkdir -p public
         cp -r templates/* public/
-        
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GH_TOKEN }} # Use your secret token here
+        github_token: ${{ secrets.GITHUB_TOKEN }} # Use default token provided by GitHub Actions
         publish_dir: ./public

@@ -19,7 +19,7 @@ Before you begin, ensure you have the following installed on your system:
 1. **Clone the Repository**  
    Clone this repository to your local machine using the following command:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/SyedShahmeerAli12/Data_Summarization
 
 
 2. **Set Up Hugging Face API Keyy**  

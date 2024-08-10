@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x' # Specify the Python version
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
@@ -25,20 +25,11 @@ jobs:
 
     - name: Build static files
       run: |
-        echo "GITHUB_REPOSITORY: SyedShahmeerAli12/Data_Summarization_NLP" 
-        echo "USER: SyedShahmeerAli12" 
-        echo "PROJECT_BASE_URL: Data_Summarization_NLP"
-        
-        # Create the public directory if it doesn't exist
         mkdir -p public
-        
-        # Copy static files to the public directory
         cp -r templates/* public/
-        
-        # You can add other build steps here if necessary
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GH_TOKEN }}
         publish_dir: ./public
